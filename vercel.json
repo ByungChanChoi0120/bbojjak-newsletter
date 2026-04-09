@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/f-labs-interview", "destination": "/f-labs-interview/index.html" }
+  ]
+}
