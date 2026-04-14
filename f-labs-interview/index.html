@@ -20,11 +20,12 @@
       --text-muted: #888;
       --bg-page: #f7f5f2;
       --bg-card: #ffffff;
-      --bg-takeaway: #faf8f4;
-      --bg-chapter-tag: #f0ece4;
+      --bg-takeaway: #fff6f0;
+      --bg-chapter-tag: #ffefe2;
       --border-light: #e8e4dc;
-      --border-quote: #1a1a1a;
-      --accent: #1a1a1a;
+      --border-quote: #EB5A0F;
+      --accent: #EB5A0F;
+      --accent-dark: #c44a0a;
       --font-main: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
     }
 
@@ -202,12 +203,12 @@
     .chapter-tag {
       display: inline-block;
       font-size: 11px;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       background-color: var(--bg-chapter-tag);
-      color: var(--text-secondary);
-      padding: 4px 10px;
+      color: var(--accent);
+      padding: 5px 12px;
       border-radius: 4px;
       margin-bottom: 12px;
     }
@@ -244,7 +245,7 @@
     blockquote {
       margin: 24px 0;
       padding: 0 0 0 20px;
-      border-left: 3px solid var(--border-quote);
+      border-left: 3px solid var(--accent);
     }
 
     blockquote .quote-text {
@@ -273,6 +274,7 @@
       line-height: 1.6;
       color: var(--text-primary);
       word-break: keep-all;
+      border-left: 3px solid var(--accent);
     }
 
     /* Image placeholder */
@@ -339,7 +341,8 @@
 
     /* CTA Footer */
     .cta-section {
-      background-color: var(--text-primary);
+      background-color: var(--accent);
+      background-image: linear-gradient(135deg, #EB5A0F 0%, #c44a0a 100%);
       color: #fff;
       padding: 40px 40px 44px;
       border-radius: 0 0 2px 2px;
@@ -370,7 +373,7 @@
     .cta-button {
       display: inline-block;
       background-color: #fff;
-      color: var(--text-primary);
+      color: var(--accent);
       font-size: 14px;
       font-weight: 700;
       padding: 12px 22px;
