@@ -277,6 +277,17 @@
       border-left: 3px solid var(--accent);
     }
 
+    /* Term note (footnote-style explanation) */
+    .term-note {
+      font-size: 13px;
+      color: var(--text-muted);
+      font-style: italic;
+      margin: -8px 0 18px 0;
+      padding-left: 14px;
+      border-left: 2px solid var(--border-light);
+      line-height: 1.6;
+    }
+
     /* Image placeholder */
     .img-placeholder {
       background-color: var(--bg-chapter-tag);
@@ -610,7 +621,8 @@
             <p class="body-text">그래서 초기 스킬은 박중수님이 각 부서 봇에 전부 직접 세팅해줬어요. 자주 쓰는 업무 템플릿 같은 건 미리 만들어놓고, 구성원들이 첫날부터 바로 쓸 수 있게 깔아뒀습니다.</p>
             <p class="body-text">사용 가이드도 줬는데, 방식이 독특해요. 매뉴얼을 10페이지 쓰는 게 아니라 봇한테 던질 키워드만 알려줬어요.</p>
 
-            <p class="body-text">예를 들면 "홈페이지 내용을 크롤링(홈페이지에 있는 글·사진을 자동으로 복사해 오는 것)할 때 잘 안 되면 <strong>Playwright</strong>(사람 대신 웹사이트를 클릭하고 타이핑해 주는 로봇 같은 도구)라는 걸 써라" 같은 식이었어요. AI가 잘할 수 있는 툴을 콕 집어준 거죠.</p>
+            <p class="body-text">예를 들면 "홈페이지 내용을 크롤링할 때 잘 안 되면 <strong>Playwright</strong>라는 걸 써라" 같은 식이었어요. AI가 잘할 수 있는 툴을 콕 집어준 거죠.</p>
+            <p class="term-note">* 크롤링 = 홈페이지에 있는 글·사진을 자동으로 복사해 오는 것<br/>* Playwright = 사람 대신 웹사이트를 클릭하고 타이핑해 주는 로봇 같은 도구</p>
 
             <p class="body-text">이렇게 한 이유는 간단했어요.</p>
 
@@ -643,7 +655,8 @@
               <div style="font-size: 11px; color: var(--text-muted); margin-top: 10px; font-style: italic;">멘토링 자동 분석 리포트 예시 (임시, 박중수님 실제 캡처로 교체 예정)</div>
             </div>
 
-            <p class="body-text">카드뉴스는 피그마 MCP(AI한테 피그마라는 디자인 툴을 직접 쓸 수 있게 연결해 주는 콘센트 같은 거예요)를 꽂아서 자동으로 만들고 있고요. 나라장터 입찰 분석, 마케팅 데일리 리포트까지.</p>
+            <p class="body-text">카드뉴스는 피그마 MCP를 꽂아서 자동으로 만들고 있고요. 나라장터 입찰 분석, 마케팅 데일리 리포트까지.</p>
+            <p class="term-note">* 피그마 MCP = AI한테 피그마(디자인 툴)를 직접 쓸 수 있게 연결해 주는 콘센트 같은 거</p>
             <p class="body-text">특히 인상적이었던 건 마케터가 없는 상황에서의 퍼포먼스 분석이에요. 마케터가 없는데 어떻게 분석을 하냐고요? AI가 합니다. 데일리로 레포팅 메일까지 보내줘요.</p>
 
             <blockquote>
@@ -753,7 +766,8 @@
             </blockquote>
 
             <p class="body-text">봇이 "정리"를 자기 판단으로 실행해버린 겁니다. 시키지도 않았는데.</p>
-            <p class="body-text">그래서 대응 구조를 만들었어요. <strong>API 래핑</strong>(봇이 뭔가 실행하기 직전에, 회사가 먼저 "이거 괜찮은 거야?" 확인하는 문지기를 세워두는 것)이라는 방법입니다. 서버단에서 중복 요청을 차단하고, 수량 제한을 걸어놓는 거예요.</p>
+            <p class="body-text">그래서 대응 구조를 만들었어요. <strong>API 래핑</strong>이라는 방법입니다. 서버단에서 중복 요청을 차단하고, 수량 제한을 걸어놓는 거예요.</p>
+            <p class="term-note">* API 래핑 = 봇이 뭔가 실행하기 직전에, 회사가 먼저 "이거 괜찮은 거야?" 확인하는 문지기를 세워두는 것</p>
 
             <blockquote>
               <p class="quote-text">"프로그래밍으로 100% 보장되는 영역과 AI 추론 영역을 분리하는 거예요."</p>
@@ -786,7 +800,8 @@
             </blockquote>
 
             <p class="body-text">무슨 뜻일까요. 개발자가 직접 코드를 짜는 것보다 <strong>아키텍처를 설계하는 일</strong>이 중요해졌다는 거예요. 봇이 코드를 쓰게 하되, 봇이 엉뚱한 곳으로 가지 못하게 구조로 막는 일이 핵심이 된 거죠.</p>
-            <p class="body-text">예를 들어 QA 봇(다른 봇이 만든 결과물을 옆에서 "이거 이상한데?" 하고 검사해 주는 봇)이 있어요. 5분마다 계속 반복적인 업무를 진행합니다. 스스로 피드백을 하고, 컴파일(사람이 쓴 코드를 컴퓨터가 알아들을 수 있게 번역하는 과정)이 안 되면 아예 진행을 못 하게 설계해놨어요. QA → 개발 → QA를 3~4시간 반복하면 괜찮은 코드가 나옵니다.</p>
+            <p class="body-text">예를 들어 QA 봇이 있어요. 5분마다 계속 반복적인 업무를 진행합니다. 스스로 피드백을 하고, 컴파일이 안 되면 아예 진행을 못 하게 설계해놨어요. QA → 개발 → QA를 3~4시간 반복하면 괜찮은 코드가 나옵니다.</p>
+            <p class="term-note">* QA 봇 = 다른 봇이 만든 결과물을 옆에서 "이거 이상한데?" 하고 검사해 주는 봇<br/>* 컴파일 = 사람이 쓴 코드를 컴퓨터가 알아들을 수 있게 번역하는 과정</p>
             <p class="body-text">아직 아쉬운 점도 있었어요. 스킬을 팀 간에 공유하는 인프라가 없다는 거예요. A팀이 만든 스킬을 B팀이 모르고 똑같은 걸 또 만드는 비효율이 생기고 있거든요.</p>
 
             <div class="takeaway">
