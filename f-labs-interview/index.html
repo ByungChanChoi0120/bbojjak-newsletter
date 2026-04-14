@@ -573,6 +573,37 @@
             <p class="body-text">스킬은 반복적인 작업을 템플릿화한 거예요.</p>
             <p class="body-text">박중수님이 팀원들에게 심어준 건 3단계 루프였어요. <strong>봇한테 일 시키기 → 결과에 피드백(잔소리) → 잘 된 걸 스킬로 저장 → 반복.</strong> 박중수님은 이 과정을 사람 키우는 것에 비유했어요.</p>
 
+            <figure style="margin: 28px 0; text-align: center;">
+              <svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 560px; height: auto;">
+                <defs>
+                  <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                    <path d="M0,0 L0,6 L9,3 z" fill="#1a1a1a"/>
+                  </marker>
+                </defs>
+                <rect x="10" y="60" width="120" height="80" rx="12" fill="#faf8f4" stroke="#1a1a1a" stroke-width="1.5"/>
+                <text x="70" y="95" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a1a1a">1. 일 시키기</text>
+                <text x="70" y="115" font-family="Pretendard, sans-serif" font-size="11" text-anchor="middle" fill="#555">봇한테 요청</text>
+
+                <line x1="135" y1="100" x2="165" y2="100" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+                <rect x="170" y="60" width="120" height="80" rx="12" fill="#f0ece4" stroke="#1a1a1a" stroke-width="1.5"/>
+                <text x="230" y="95" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a1a1a">2. 잔소리</text>
+                <text x="230" y="115" font-family="Pretendard, sans-serif" font-size="11" text-anchor="middle" fill="#555">결과 피드백</text>
+
+                <line x1="295" y1="100" x2="325" y2="100" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+                <rect x="330" y="60" width="120" height="80" rx="12" fill="#faf8f4" stroke="#1a1a1a" stroke-width="1.5"/>
+                <text x="390" y="95" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a1a1a">3. 스킬 저장</text>
+                <text x="390" y="115" font-family="Pretendard, sans-serif" font-size="11" text-anchor="middle" fill="#555">잘 된 걸 템플릿화</text>
+
+                <line x1="455" y1="100" x2="490" y2="100" stroke="#1a1a1a" stroke-width="1.5" marker-end="url(#arrow)"/>
+                <text x="525" y="105" font-family="Pretendard, sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#1a1a1a">반복</text>
+
+                <path d="M 525 115 Q 525 170 70 170 Q 70 145 70 145" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
+              </svg>
+              <figcaption style="font-size: 12px; color: var(--text-muted); margin-top: 8px;">박중수님의 3단계 스킬 루프 (임시 도식)</figcaption>
+            </figure>
+
             <p class="body-text">그래서 초기 스킬은 박중수님이 각 부서 봇에 전부 직접 세팅해줬어요. 자주 쓰는 업무 템플릿 같은 건 미리 만들어놓고, 구성원들이 첫날부터 바로 쓸 수 있게 깔아뒀습니다.</p>
             <p class="body-text">사용 가이드도 줬는데, 방식이 독특해요. 매뉴얼을 10페이지 쓰는 게 아니라 봇한테 던질 키워드만 알려줬어요.</p>
 
@@ -600,9 +631,13 @@
             <p class="body-text">지출증빙 업무. 원래 1주일 야근이 필요했어요. 봇 도입 후, 몇 시간으로 줄었습니다.</p>
             <p class="body-text">멘토링 모니터링이 더 극적이에요. 주당 200건의 1시간짜리 멘토링 영상이 들어옵니다. 사람이 다 볼 수 있을까요? 불가능하죠. 지금은 봇이 전부 자동으로 분석하고 리포트를 만듭니다. <strong>매일 아침 9시에 발송</strong>, 클릭하면 멘토링 스크립트까지 볼 수 있어요.</p>
 
-            <div class="img-placeholder">
-              <span class="img-placeholder-icon">📊</span>
-              멘토링 자동 분석 리포트 예시 화면
+            <div class="img-placeholder" style="padding: 24px 20px;">
+              <div style="background: #fff; border-radius: 6px; padding: 16px 18px; text-align: left; border: 1px solid #e8e4dc; max-width: 420px; margin: 0 auto;">
+                <div style="font-size: 11px; color: #888; margin-bottom: 6px;">📧 매일 아침 9:00 · Slack DM</div>
+                <div style="font-size: 14px; font-weight: 700; color: #1a1a1a; margin-bottom: 10px;">🐈‍⬛ 어제 멘토링 38건 분석 완료</div>
+                <div style="font-size: 12px; color: #555; line-height: 1.7;">• 고품질 28건 · 주의 필요 7건 · 이상 3건<br/>• 주요 피드백 키워드: 숙제 체크, 동기부여<br/>• 클릭하면 스크립트 바로 확인 ↗</div>
+              </div>
+              <div style="font-size: 11px; color: var(--text-muted); margin-top: 10px; font-style: italic;">멘토링 자동 분석 리포트 예시 (임시, 박중수님 실제 캡처로 교체 예정)</div>
             </div>
 
             <p class="body-text">카드뉴스는 피그마 MCP를 연결해서 자동으로 만들고 있고요. 나라장터 입찰 분석, 마케팅 데일리 리포트까지.</p>
@@ -645,6 +680,42 @@
             </blockquote>
 
             <p class="body-text">DM은 두 사람만 아는 대화입니다. 한 명이 나가면 절반이 사라져요. 봇이 있는 공개 채널에서 일하면, 그 대화 자체가 봇의 지식이 됩니다. 봇에 축적된 지식은 팀의 자산이에요. 퇴사자가 나가도, 봇은 남거든요.</p>
+
+            <figure style="margin: 28px 0;">
+              <svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 560px; height: auto;">
+                <rect x="10" y="10" width="260" height="200" rx="12" fill="#faf8f4" stroke="#1a1a1a" stroke-width="1.5"/>
+                <text x="140" y="36" font-family="Pretendard, sans-serif" font-size="14" font-weight="800" text-anchor="middle" fill="#1a1a1a">DM 문화 ❌</text>
+
+                <circle cx="80" cy="90" r="18" fill="#1a1a1a"/>
+                <text x="80" y="95" font-family="Pretendard, sans-serif" font-size="14" text-anchor="middle" fill="#fff">A</text>
+                <circle cx="200" cy="90" r="18" fill="#1a1a1a"/>
+                <text x="200" y="95" font-family="Pretendard, sans-serif" font-size="14" text-anchor="middle" fill="#fff">B</text>
+                <line x1="100" y1="90" x2="180" y2="90" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="3,3"/>
+                <text x="140" y="78" font-family="Pretendard, sans-serif" font-size="10" text-anchor="middle" fill="#888">비밀 대화</text>
+
+                <text x="140" y="150" font-family="Pretendard, sans-serif" font-size="12" text-anchor="middle" fill="#555">A가 퇴사하면</text>
+                <text x="140" y="170" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a1a1a">절반의 맥락이 사라짐</text>
+                <text x="140" y="190" font-family="Pretendard, sans-serif" font-size="11" text-anchor="middle" fill="#888">인수인계 = 불가능</text>
+
+                <rect x="290" y="10" width="260" height="200" rx="12" fill="#f0ece4" stroke="#1a1a1a" stroke-width="1.5"/>
+                <text x="420" y="36" font-family="Pretendard, sans-serif" font-size="14" font-weight="800" text-anchor="middle" fill="#1a1a1a">팀 봇 채널 ✓</text>
+
+                <circle cx="340" cy="90" r="16" fill="#1a1a1a"/>
+                <text x="340" y="95" font-family="Pretendard, sans-serif" font-size="12" text-anchor="middle" fill="#fff">A</text>
+                <circle cx="390" cy="90" r="16" fill="#1a1a1a"/>
+                <text x="390" y="95" font-family="Pretendard, sans-serif" font-size="12" text-anchor="middle" fill="#fff">B</text>
+                <circle cx="440" cy="90" r="16" fill="#1a1a1a"/>
+                <text x="440" y="95" font-family="Pretendard, sans-serif" font-size="12" text-anchor="middle" fill="#fff">C</text>
+                <circle cx="495" cy="90" r="18" fill="#fff" stroke="#1a1a1a" stroke-width="2"/>
+                <text x="495" y="97" font-family="Pretendard, sans-serif" font-size="16" text-anchor="middle">🐈‍⬛</text>
+                <text x="420" y="122" font-family="Pretendard, sans-serif" font-size="10" text-anchor="middle" fill="#888">모든 대화 → 봇이 학습</text>
+
+                <text x="420" y="150" font-family="Pretendard, sans-serif" font-size="12" text-anchor="middle" fill="#555">A가 퇴사해도</text>
+                <text x="420" y="170" font-family="Pretendard, sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="#1a1a1a">봇이 맥락을 기억</text>
+                <text x="420" y="190" font-family="Pretendard, sans-serif" font-size="11" text-anchor="middle" fill="#888">팀 지식 = 자산</text>
+              </svg>
+              <figcaption style="font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 8px;">DM 문화 vs 팀 봇 구조 (임시 도식)</figcaption>
+            </figure>
             <p class="body-text">이걸 실현하는 방법이 기막혀요. 봇의 "압도적인 중독성"을 이용하는 거예요.</p>
 
             <blockquote>
