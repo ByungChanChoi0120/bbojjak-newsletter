@@ -107,22 +107,25 @@
     }
 
     .hero-title {
-      font-size: 30px;
-      font-weight: 800;
-      line-height: 1.3;
-      letter-spacing: -0.03em;
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
       color: var(--text-primary);
-      margin-bottom: 16px;
+      margin-bottom: 20px;
       word-break: keep-all;
+      font-feature-settings: "lnum", "locl";
     }
 
     .hero-subtitle {
-      font-size: 15px;
+      font-size: 17px;
       color: var(--text-secondary);
-      font-style: italic;
-      line-height: 1.6;
-      margin-bottom: 28px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 32px;
       word-break: keep-all;
+      letter-spacing: -0.005em;
     }
 
     .hero-meta {
@@ -204,22 +207,23 @@
 
     .chapter-tag {
       display: inline-block;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 600;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
-      background-color: var(--bg-chapter-tag);
-      color: var(--text-secondary);
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin-bottom: 12px;
+      background-color: #f2f9ff;
+      color: #097fe8;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(0,117,222,0.15);
     }
 
     .chapter-title {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.35;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
       color: var(--text-primary);
       word-break: keep-all;
     }
@@ -245,9 +249,9 @@
 
     /* Blockquote */
     blockquote {
-      margin: 24px 0;
-      padding: 0 0 0 20px;
-      border-left: 3px solid var(--border-quote);
+      margin: 28px 0;
+      padding: 4px 0 4px 24px;
+      border-left: 4px solid var(--accent);
     }
 
     blockquote .quote-text {
@@ -267,15 +271,17 @@
 
     /* Takeaway highlight */
     .takeaway {
-      background-color: var(--bg-takeaway);
-      border-radius: 8px;
-      padding: 18px 22px;
-      margin: 24px 0;
+      background-color: #f2f9ff;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 28px 0;
       font-size: 16px;
-      font-weight: 700;
+      font-weight: 600;
       line-height: 1.6;
       color: var(--text-primary);
       word-break: keep-all;
+      border-left: 4px solid var(--accent);
+      letter-spacing: -0.005em;
     }
 
     /* Image placeholder */
@@ -342,10 +348,11 @@
 
     /* CTA Footer */
     .cta-section {
-      background-color: var(--text-primary);
+      background-color: var(--accent);
       color: #fff;
-      padding: 40px 40px 44px;
+      padding: 44px 40px 48px;
       border-radius: 0 0 2px 2px;
+      background-image: linear-gradient(135deg, #0075de 0%, #005bab 100%);
     }
 
     .cta-paw {
@@ -373,14 +380,15 @@
     .cta-button {
       display: inline-block;
       background-color: #fff;
-      color: var(--text-primary);
-      font-size: 14px;
-      font-weight: 700;
-      padding: 12px 22px;
-      border-radius: 6px;
+      color: var(--accent);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 13px 26px;
+      border-radius: 9999px;
       text-decoration: none;
       letter-spacing: -0.01em;
-      transition: opacity 0.15s;
+      transition: all 0.15s;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
 
     .cta-button:hover {
@@ -440,11 +448,12 @@
       }
 
       .hero-title {
-        font-size: 24px;
+        font-size: 30px;
+        letter-spacing: -0.035em;
       }
 
       .chapter-title {
-        font-size: 19px;
+        font-size: 21px;
       }
 
       .hero-meta {
